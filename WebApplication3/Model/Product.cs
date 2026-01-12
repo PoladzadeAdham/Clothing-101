@@ -19,5 +19,8 @@ namespace WebApplication3.Model
         public int ReviewCount { get; set; }
         [Required]  
         public string ImagePath { get; set; }
+        public Category Category { get; set; }
+        public int CategoryId { get; set; }
     }
 }
+
