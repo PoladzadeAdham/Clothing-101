@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApplication3.Context;
@@ -8,6 +9,7 @@ namespace WebApplication3.Controllers
 {
     public class ProductController(AppDbContext _context) : Controller
     {
+        [Authorize(Roles = "member")]
         public async Task<IActionResult> Index()
         {
             var products = await _context.Products.Select(p => new ProductGetVm

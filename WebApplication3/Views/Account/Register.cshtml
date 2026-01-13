@@ -1,0 +1,44 @@
+﻿@model RegisterVm
+<br />
+<br />
+<br />
+<br />
+
+
+<div class="container">
+    <div class="row">
+        <form method="post">
+            <div asp-validation-summary="All"></div>
+            <div class="form-group">
+                <label for="UserName"></label>
+                <input asp-for="UserName" class="form-control" placeholder="Enter UserName">
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="Email"></label>
+                <input asp-for="Email" class="form-control" placeholder="Enter Email">
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="Password"></label>
+                <input asp-for="Password" class="form-control" placeholder="Enter Password">
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="ConfirmPassword"></label>
+                <input asp-for="ConfirmPassword" class="form-control" placeholder="Enter ConfirmPassword">
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+
+
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+
+</div>
+
